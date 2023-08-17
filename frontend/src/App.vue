@@ -2,7 +2,7 @@
   <section class="container">
     <h1>Pokédex</h1>
     <ol class="pokemons">
-      <li v-for="pokemon in pokemons" :key="pokemon.name" :style="{ backgroundColor: pokemon.color }">
+      <li v-for="pokemon in pokemons" :key="pokemon.id" :style="{ backgroundColor: pokemon.color }">
         {{ pokemon.name }}
       </li>
     </ol>
