@@ -2,29 +2,17 @@
   <section class="container">
     <h1>Pokédex</h1>
     <ol class="pokemons">
-      <li>
-        Bulbasaur
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
-      </li>
-      <li>
-        Ivysaur
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg" alt="Ivysaur">
-      </li>
-      <li>
-        Venusaur
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg" alt="Venusaur">
-      </li>
-      <li>
-        Charmander
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg" alt="Charmander">
-      </li>
-      <li>
-        Charmeleon
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg" alt="Charmeleon">
-      </li>
-      <li>
-        Charizard
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg" alt="Charizard">
+      <li class="pokemon">
+        <span class="number">#001</span>
+        <span class="name">Bulbasaur</span>
+        <div class="details">
+          <ol class="types">
+            <li class="type">grass</li>
+            <li class="type">poison</li>
+          </ol>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+            alt="Bulbasaur">
+        </div>
       </li>
     </ol>
   </section>
@@ -39,7 +27,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
 .container {
   padding: 1rem;
 }
@@ -47,6 +34,7 @@ export default defineComponent({
 .container h1 {
   margin: 0;
 }
+
 .pokemons {
   margin-top: 10px;
   display: grid;
@@ -55,16 +43,17 @@ export default defineComponent({
   list-style: none;
   padding: 0;
 }
-.pokemons li {
+
+.pokemon {
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
   color: white;
   border-radius: 1rem;
-  background-color: #14A06F;
+  background-color: #1AC9A9;
 }
 
-.pokemons li img{
+.pokemon .details img {
   max-width: 100%;
   height: 100px;
 }
