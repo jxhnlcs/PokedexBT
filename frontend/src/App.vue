@@ -53,6 +53,32 @@ export default defineComponent({
   background-color: #1AC9A9;
 }
 
+.pokemon .number {
+  color: #000;
+  opacity: 0.3;
+  text-align: right;
+}
+
+.pokemon .details{
+  display: flex;
+  flex-direction: row;
+}
+
+.pokemon .details .types {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pokemon .details .types .type{
+  background-color: #3FDAC0;
+  color: #fff;
+  padding: .25rem .5rem;
+  margin: .25rem 0;
+  font-size: .825rem;
+  border-radius: 1rem;
+}
+
 .pokemon .details img {
   max-width: 100%;
   height: 100px;
