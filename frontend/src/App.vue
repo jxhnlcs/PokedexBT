@@ -38,7 +38,7 @@ export default defineComponent({
 .pokemons {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: .5rem;
   list-style: none;
   padding: 0;
@@ -84,6 +84,8 @@ export default defineComponent({
   margin: .25rem 0;
   font-size: .825rem;
   border-radius: 1rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 .pokemon .details img {
