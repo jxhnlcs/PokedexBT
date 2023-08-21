@@ -47,8 +47,7 @@ export default defineComponent({
 .pokemon {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
-  color: white;
+  padding: 1rem 1rem;
   border-radius: 1rem;
   background-color: #1AC9A9;
 }
@@ -57,11 +56,19 @@ export default defineComponent({
   color: #000;
   opacity: 0.3;
   text-align: right;
+  font-size: .900rem;
+}
+
+.pokemon .name{
+  color: white;
+  margin-bottom: 0;
 }
 
 .pokemon .details{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .pokemon .details .types {
