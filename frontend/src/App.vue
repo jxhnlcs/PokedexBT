@@ -72,7 +72,7 @@ export default defineComponent({
         .then((pokemonList: Pokemon[]) => {
           this.pokemonList = pokemonList.map(pokemon => ({
             ...pokemon,
-            name: this.capitalizeFirstLetter(pokemon.name), // Capitalize Pokémon names
+            name: this.capitalizeFirstLetter(pokemon.name),
           }));
           this.fetchPokemonTypes();
         })
@@ -85,7 +85,7 @@ export default defineComponent({
           .then((response) => response.json())
           .then((pokemonDetails) => {
             pokemon.types = pokemonDetails.types.map((typeInfo: any) =>
-              this.capitalizeFirstLetter(typeInfo.type.name) // Capitalize type names
+              this.capitalizeFirstLetter(typeInfo.type.name)
             );
           })
           .catch((error) => console.error(error));
