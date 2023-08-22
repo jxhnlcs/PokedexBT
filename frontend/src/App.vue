@@ -61,22 +61,32 @@ export default defineComponent({
   },
 
   methods: {
+    capitalizeFirstLetter(text: string) {
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    },
+
     fetchPokemonList() {
       fetch(this.url)
         .then((response) => response.json())
         .then((jsonBody) => jsonBody.results)
         .then((pokemonList: Pokemon[]) => {
-          this.pokemonList = pokemonList;
+          this.pokemonList = pokemonList.map(pokemon => ({
+            ...pokemon,
+            name: this.capitalizeFirstLetter(pokemon.name), // Capitalize Pokémon names
+          }));
           this.fetchPokemonTypes();
         })
         .catch((error) => console.error(error));
     },
+
     fetchPokemonTypes() {
       this.pokemonList.forEach((pokemon) => {
         fetch(pokemon.url)
           .then((response) => response.json())
           .then((pokemonDetails) => {
-            pokemon.types = pokemonDetails.types.map((typeInfo: any) => typeInfo.type.name);
+            pokemon.types = pokemonDetails.types.map((typeInfo: any) =>
+              this.capitalizeFirstLetter(typeInfo.type.name) // Capitalize type names
+            );
           })
           .catch((error) => console.error(error));
       });
